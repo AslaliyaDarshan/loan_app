@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loan_app/view/UiScreen/GuidanceScreen.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:lottie/lottie.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -16,7 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
     var mHeight = MediaQuery.of(context).size.height;
     var mWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: splashBG,
       body: Container(
         height: mHeight,
         width: mWidth,
@@ -39,7 +40,16 @@ class _SplashScreenState extends State<SplashScreen> {
             height(mHeight * 0.2),
             InkWell(
               onTap: () {
-                Get.offNamed("/GuidanceScreen");
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    duration: const Duration(milliseconds: 1700),
+                    alignment: Alignment.center,
+                    childCurrent: const SplashScreen(),
+                    child: const GuidanceScreen(),
+                  ),
+                );
               },
               child: Container(
                 height: mHeight * 0.077,
@@ -47,12 +57,12 @@ class _SplashScreenState extends State<SplashScreen> {
                 alignment: Alignment.center,
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2A7ADA),
+                  color: buttonClr,
                   borderRadius: BorderRadius.circular(35),
                 ),
                 child: text("Start", Colors.white, mWidth * 0.085),
               ),
-            )
+            ),
           ],
         ),
       ),
