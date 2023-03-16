@@ -28,6 +28,16 @@ class _HomeLoanScreenState extends State<HomeLoanScreen> {
           DraggableHome(
             physics: const BouncingScrollPhysics(),
             appBarColor: const Color(0xFF003676),
+            leading: IconButton(
+              splashRadius: 25,
+              onPressed: () {
+                Get.back();
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                size: mWidth * 0.09,
+              ),
+            ),
             headerExpandedHeight: 0.57,
             fullyStretchable: true,
             curvedBodyRadius: 20,
