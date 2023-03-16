@@ -2,18 +2,15 @@ import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
-import 'package:page_transition/page_transition.dart';
 
-import 'SplashScreen.dart';
-
-class HomeLoanScreen extends StatefulWidget {
-  const HomeLoanScreen({Key? key}) : super(key: key);
+class BusinessLoan extends StatefulWidget {
+  const BusinessLoan({Key? key}) : super(key: key);
 
   @override
-  State<HomeLoanScreen> createState() => _HomeLoanScreenState();
+  State<BusinessLoan> createState() => _BusinessLoanState();
 }
 
-class _HomeLoanScreenState extends State<HomeLoanScreen> {
+class _BusinessLoanState extends State<BusinessLoan> {
   dynamic data = Get.arguments;
 
   @override
@@ -77,22 +74,11 @@ class _HomeLoanScreenState extends State<HomeLoanScreen> {
                   height: mHeight / 4.5,
                   width: mWidth,
                   color: Colors.white.withOpacity(0.5)),
-              loanDetailText("Home", context)
+              loanDetailText("Business", context)
             ],
           ),
           InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                PageTransition(
-                  type: PageTransitionType.fade,
-                  duration: const Duration(milliseconds: 1700),
-                  alignment: Alignment.center,
-                  childCurrent: const HomeLoanScreen(),
-                  child: const SplashScreen(),
-                ),
-              );
-            },
+            onTap: () {},
             child: Container(
               height: mHeight * 0.077,
               width: MediaQuery.of(context).size.width,

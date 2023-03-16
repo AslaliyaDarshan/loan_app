@@ -56,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/GuideForLoan",
                   arguments: [
                     {"title": "Guide For Loan"},
                     {"image": "assets/image/guideForLoan.png"}
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/PersonalLoan",
                   arguments: [
                     {"title": "Personal Loan Guide"},
                     {"image": "assets/image/personal.png"}
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "assets/image/personal.png", BoxFit.cover),
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/BusinessLoan",
                   arguments: [
                     {"title": "Business Loan Guide"},
                     {"image": "assets/image/business.png"}
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/CreditCardLoan",
                   arguments: [
                     {"title": "Creditcard Loan Guide"},
                     {"image": "assets/image/credit.png"}
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "assets/image/credit.png", BoxFit.cover),
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/EducationLoan",
                   arguments: [
                     {"title": "Education Loan Guide"},
                     {"image": "assets/image/education.png"}
@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/CarLoan",
                   arguments: [
                     {"title": "Car Loan Guide"},
                     {"image": "assets/image/car.png"}
@@ -141,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "assets/image/car.png", BoxFit.cover),
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/BikeLoan",
                   arguments: [
                     {"title": "Bike Loan Guide"},
                     {"image": "assets/image/bike.png"}
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/AgricultureLoan",
                   arguments: [
                     {"title": "Agriculture Loan Guide"},
                     {"image": "assets/image/agriculture.png"}
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   "assets/image/agriculture.png", BoxFit.cover),
               button(() {
                 Get.toNamed(
-                  "/HomeLoanScreen",
+                  "/GoldLoan",
                   arguments: [
                     {"title": "Gold Loan Guide"},
                     {"image": "assets/image/gold.png"}

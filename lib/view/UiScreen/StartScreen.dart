@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:loan_app/view/UiScreen/HomeScreen.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:page_transition/page_transition.dart';
@@ -40,7 +41,24 @@ class _StartScreenState extends State<StartScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                button(() {}, mHeight * 0.033, mHeight / 5, mWidth / 2.5,
+                button(() {
+                  print("rating");
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  );
+                }, mHeight * 0.033, mHeight / 5, mWidth / 2.5,
                     "assets/image/rateUs.png", BoxFit.cover),
                 button(() {}, mHeight * 0.033, mHeight / 5, mWidth / 2.5,
                     "assets/image/share.png", BoxFit.contain),
