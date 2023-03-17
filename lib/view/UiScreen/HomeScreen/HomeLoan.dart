@@ -1,6 +1,7 @@
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loan_app/view/UiScreen/Questions/FirstQuestion.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -74,35 +75,27 @@ class _HomeLoanState extends State<HomeLoan> {
             ),
             body: [
               Container(
-                  height: mHeight / 4.5,
-                  width: mWidth,
-                  color: Colors.white.withOpacity(0.5)),
+                height: mHeight / 4.5,
+                width: mWidth,
+                color: Colors.white.withOpacity(0.5),
+              ),
               loanDetailText("Home", context)
             ],
           ),
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                PageTransition(
-                  type: PageTransitionType.fade,
-                  duration: const Duration(milliseconds: 1700),
-                  alignment: Alignment.center,
-                  childCurrent: const HomeLoan(),
-                  child: const SplashScreen(),
-                ),
-              );
+              Get.to(const FirstQuestion());
             },
             child: Container(
-              height: mHeight * 0.077,
+              height: mHeight * 0.068,
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.center,
-              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
               decoration: BoxDecoration(
                 color: buttonClr,
                 borderRadius: BorderRadius.circular(35),
               ),
-              child: text("Next", Colors.white, mWidth * 0.085),
+              child: text("Next", Colors.white, mWidth * 0.09),
             ),
           )
         ],

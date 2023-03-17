@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:loan_app/view/UiScreen/GuideForLoan.dart';
+import 'package:loan_app/view/UiScreen/GuideForLoan/CalculatorScreen.dart';
+import 'package:loan_app/view/UiScreen/GuideForLoan/GuideForLoan.dart';
 import 'package:loan_app/view/UiScreen/HomeScreen/AgricultureLoan.dart';
 import 'package:loan_app/view/UiScreen/HomeScreen/BikeLoan.dart';
 import 'package:loan_app/view/UiScreen/HomeScreen/BusinessLoan.dart';
@@ -38,7 +39,8 @@ void main() {
         GetPage(name: "/BikeLoan", page: () => const BikeLoan()),
         GetPage(name: "/AgricultureLoan", page: () => const AgricultureLoan()),
         GetPage(name: "/GoldLoan", page: () => const GoldLoan()),
-
+        GetPage(
+            name: "/CalculatorScreen", page: () => const CalculatorScreen()),
       ],
     ),
   );

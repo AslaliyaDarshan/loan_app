@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 Color buttonClr = const Color(0xFF1670D7);
 
@@ -18,6 +19,7 @@ text(String pStrText, Color pClrColor, double pDblFontSize,
     {FontWeight? pFontWeight}) {
   return Text(
     pStrText,
+    textAlign: TextAlign.center,
     style: TextStyle(
       color: pClrColor,
       fontSize: pDblFontSize,
@@ -25,6 +27,33 @@ text(String pStrText, Color pClrColor, double pDblFontSize,
       fontFamily: "patrick",
       letterSpacing: 2,
       fontStyle: FontStyle.italic,
+    ),
+  );
+}
+
+appBar(String pStrText, double pDblFontSize) {
+  return AppBar(
+    leading: IconButton(
+      splashRadius: 25,
+      onPressed: () {
+        Get.back();
+      },
+      icon: Icon(
+        Icons.arrow_back,
+        size: pDblFontSize * 0.085,
+      ),
+    ),
+    backgroundColor: const Color(0xFF023574),
+    title: Text(
+      pStrText,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: pDblFontSize * 0.07,
+        fontWeight: FontWeight.w700,
+        fontFamily: "patrick",
+        letterSpacing: 2,
+        fontStyle: FontStyle.italic,
+      ),
     ),
   );
 }
@@ -98,6 +127,39 @@ Once the inspection of the property is done, you need to sign the agreement of t
               fontSize: MediaQuery.of(context).size.width * 0.05),
         ),
       ],
+    ),
+  );
+}
+
+button(void Function() onTap, double pDblTopPadding, double pDblHeight,
+    double pDblWidth, String pStrUrl, BoxFit pBoxFit) {
+  return InkWell(
+    onTap: onTap,
+    borderRadius: BorderRadius.circular(20),
+    child: Container(
+      margin: EdgeInsets.only(top: pDblTopPadding),
+      height: pDblHeight,
+      width: pDblWidth,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.9),
+        borderRadius: BorderRadius.circular(25),
+        border: Border.all(
+          color: const Color(0xFF62A2F5),
+          width: 5,
+        ),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black,
+            spreadRadius: 7,
+            blurRadius: 30,
+            offset: Offset(0, 6),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: Image.asset(pStrUrl, fit: pBoxFit),
+      ),
     ),
   );
 }

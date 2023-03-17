@@ -21,7 +21,7 @@ class _StartScreenState extends State<StartScreen> {
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 7),
+              padding: const EdgeInsets.symmetric(horizontal: 7),
               child: button(() {}, mHeight * 0.04, mHeight / 3, mWidth,
                   "assets/image/start.png", BoxFit.fill),
             ),
@@ -71,39 +71,6 @@ class _StartScreenState extends State<StartScreen> {
               color: Colors.white.withOpacity(0.7),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  button(void Function() onTap, double pDblTopPadding, double pDblHeight,
-      double pDblWidth, String pStrUrl, BoxFit pBoxFit) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
-      child: Container(
-        margin: EdgeInsets.only(top: pDblTopPadding),
-        height: pDblHeight,
-        width: pDblWidth,
-        decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.9),
-          borderRadius: BorderRadius.circular(25),
-          border: Border.all(
-            color: const Color(0xFF62A2F5),
-            width: 5,
-          ),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black,
-              spreadRadius: 7,
-              blurRadius: 30,
-              offset: Offset(0, 6),
-            ),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image.asset(pStrUrl, fit: pBoxFit),
         ),
       ),
     );
