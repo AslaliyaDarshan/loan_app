@@ -39,7 +39,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                   ),
                 ),
                 child: text(
-                    "In hitch method do you went to \ntakeThe Loan Amount?",
+                    "In witch method do you went to \ntake The Loan Amount?",
                     Colors.white,
                     mWidth * 0.06),
               ),

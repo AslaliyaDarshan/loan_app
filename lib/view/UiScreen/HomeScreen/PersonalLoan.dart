@@ -1,6 +1,7 @@
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loan_app/view/UiScreen/Questions/FirstQuestion.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 
 class PersonalLoan extends StatefulWidget {
@@ -77,20 +78,9 @@ class _PersonalLoanState extends State<PersonalLoan> {
               loanDetailText("Personal", context)
             ],
           ),
-          InkWell(
-            onTap: () {},
-            child: Container(
-              height: mHeight * 0.077,
-              width: MediaQuery.of(context).size.width,
-              alignment: Alignment.center,
-              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-              decoration: BoxDecoration(
-                color: buttonClr,
-                borderRadius: BorderRadius.circular(35),
-              ),
-              child: text("Next", Colors.white, mWidth * 0.085),
-            ),
-          )
+          nextButton(() {
+            Get.to(const FirstQuestion());
+          }, mHeight, mWidth, context),
         ],
       ),
     );

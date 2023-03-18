@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:loan_app/view/UiScreen/IntroScreen.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:page_transition/page_transition.dart';
@@ -58,7 +57,7 @@ class GuideScreen extends StatelessWidget {
             // height(mHeight * 0.04),
             text("Loan Guide", Colors.white, mWidth * 0.12),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: text(
                 "Getting information of a loan instant on your mobile and You will learning how to get a different type of loan.",
                 Colors.white.withOpacity(0.8),

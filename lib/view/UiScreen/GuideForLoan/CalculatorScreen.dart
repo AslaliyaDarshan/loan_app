@@ -40,7 +40,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/emi.png", BoxFit.cover),
                   button(() {
-                    Get.to(const GstCalculator());
+                    Get.to(GstCalculator());
                   }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/gst.png", BoxFit.cover),
                 ],

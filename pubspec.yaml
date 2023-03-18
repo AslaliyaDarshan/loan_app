@@ -40,7 +40,6 @@ dependencies:
   nice_intro: ^0.2.1
   page_transition: ^2.0.9
   draggable_home: ^1.0.4
-  flutter_rating_bar: ^4.0.1
   feature_discovery: ^0.14.1
 
 dev_dependencies:

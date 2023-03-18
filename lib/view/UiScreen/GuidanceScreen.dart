@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:loan_app/view/UiScreen/GuideScreen.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:page_transition/page_transition.dart';

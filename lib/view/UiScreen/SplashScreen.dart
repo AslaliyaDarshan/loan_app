@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:loan_app/view/UiScreen/GuidanceScreen.dart';
-import 'package:loan_app/view/UiScreen/HomeScreen.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     var mHeight = MediaQuery.of(context).size.height;
@@ -48,8 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     duration: const Duration(milliseconds: 1700),
                     alignment: Alignment.center,
                     childCurrent: const SplashScreen(),
-                    // child: const GuidanceScreen(),
-                    child: const HomeScreen(),
+                    child: const GuidanceScreen(),
                   ),
                 );
               },

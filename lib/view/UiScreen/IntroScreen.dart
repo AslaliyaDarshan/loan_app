@@ -6,18 +6,12 @@ import 'package:page_transition/page_transition.dart';
 
 import 'StartScreen.dart';
 
-class Intro extends StatefulWidget {
+class Intro extends StatelessWidget {
   const Intro({Key? key}) : super(key: key);
 
   @override
-  State<Intro> createState() => _IntroState();
-}
-
-class _IntroState extends State<Intro> {
-  @override
   Widget build(BuildContext context) {
     var mHeight = MediaQuery.of(context).size.height;
-    var mWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: IntroScreens(
         footerBgColor: const Color(0xFF2A7ADA),
@@ -41,16 +35,6 @@ class _IntroState extends State<Intro> {
                     inheritTheme: true,
                     ctx: context),
               );
-              // Navigator.push(
-              //   context,
-              //   PageTransition(
-              //     type: PageTransitionType.fade,
-              //     duration: const Duration(milliseconds: 1500),
-              //     alignment: Alignment.center,
-              //     childCurrent: const Intro(),
-              //     child: const StartScreen(),
-              //   ),
-              // );
             },
             child: const Icon(
               Icons.navigate_next_outlined,

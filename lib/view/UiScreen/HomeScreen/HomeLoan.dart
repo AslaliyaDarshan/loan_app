@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loan_app/view/UiScreen/Questions/FirstQuestion.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
-import 'package:page_transition/page_transition.dart';
-
-import '../SplashScreen.dart';
 
 class HomeLoan extends StatefulWidget {
   const HomeLoan({Key? key}) : super(key: key);
@@ -82,22 +79,9 @@ class _HomeLoanState extends State<HomeLoan> {
               loanDetailText("Home", context)
             ],
           ),
-          InkWell(
-            onTap: () {
-              Get.to(const FirstQuestion());
-            },
-            child: Container(
-              height: mHeight * 0.068,
-              width: MediaQuery.of(context).size.width,
-              alignment: Alignment.center,
-              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-              decoration: BoxDecoration(
-                color: buttonClr,
-                borderRadius: BorderRadius.circular(35),
-              ),
-              child: text("Next", Colors.white, mWidth * 0.09),
-            ),
-          )
+          nextButton(() {
+            Get.to(const FirstQuestion());
+          }, mHeight, mWidth, context),
         ],
       ),
     );

@@ -163,3 +163,21 @@ button(void Function() onTap, double pDblTopPadding, double pDblHeight,
     ),
   );
 }
+
+nextButton(void Function() onTap, double pDblHeight, double pDblWidth,
+    BuildContext context) {
+  return InkWell(
+    onTap: onTap,
+    child: Container(
+      height: pDblHeight * 0.077,
+      width: MediaQuery.of(context).size.width,
+      alignment: Alignment.center,
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      decoration: BoxDecoration(
+        color: buttonClr,
+        borderRadius: BorderRadius.circular(35),
+      ),
+      child: text("Next", Colors.white, pDblWidth * 0.085),
+    ),
+  );
+}

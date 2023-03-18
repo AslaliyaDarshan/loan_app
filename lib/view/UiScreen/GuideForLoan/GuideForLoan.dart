@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loan_app/view/UiScreen/GuideForLoan/ATMScreen.dart';
+import 'package:loan_app/view/UiScreen/GuideForLoan/BankInformation.dart';
 import 'package:loan_app/view/constants/ConstantsClass.dart';
 
 class GuideForLoan extends StatefulWidget {
@@ -30,30 +32,27 @@ class _GuideForLoanState extends State<GuideForLoan> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  button(() {}, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
+                  button(() {
+                    Get.offAllNamed("/HomeScreen");
+                  }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/apply.png", BoxFit.cover),
-                  button(() {}, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
+                  button(() {
+                    Get.to(const ATMScreen());
+                  }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/atm.png", BoxFit.cover),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  button(() {}, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
+                  button(() {
+                    Get.to(const BankInformation());
+                  }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/bank.png", BoxFit.cover),
                   button(() {
                     Get.toNamed("/CalculatorScreen");
                   }, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
                       "assets/image/calculator.png", BoxFit.cover),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  button(() {}, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
-                      "assets/image/cash.png", BoxFit.cover),
-                  button(() {}, mHeight * 0.033, mHeight / 4.6, mWidth / 2.4,
-                      "assets/image/xerox.png", BoxFit.cover),
                 ],
               ),
               height(mHeight * 0.033),
